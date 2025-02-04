@@ -225,9 +225,7 @@ Track our platform's impact:
 - Live Chat: Available 9 AM - 6 PM
 - Twitter: @LifeShareSupport
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## 🙏 Acknowledgments
 
