@@ -42,11 +42,8 @@ To save lives by making blood donation more accessible and creating awareness ab
 
 ### 4. Testimonials
 - Success story submissions
-- Photo/video gallery
 - Impact statistics
 - Donor recognition wall
-- Community achievements
-- Social media integration
 
 ### 5. Contact System
 - 24/7 emergency helpline
@@ -62,25 +59,13 @@ To save lives by making blood donation more accessible and creating awareness ab
 - React.js
 - Tailwind CSS
 - Material-UI components
-- Redux for state management
 - React Router for navigation
 - Axios for API requests
 
 ### Backend
 - Node.js with Express
 - MongoDB database
-- JWT authentication
-- Socket.io for real-time updates
-- Nodemailer for email notifications
-- Twilio for SMS alerts
 
-### Security Features
-- Data encryption
-- HIPAA compliance measures
-- Privacy protection
-- Secure payment gateway
-- Rate limiting
-- Input sanitization
 
 ## 📱 Responsive Design
 
@@ -124,18 +109,8 @@ npm install
 
 3. Set up environment variables:
 ```env
-# Frontend (.env)
-REACT_APP_API_URL=your_api_url
-REACT_APP_GOOGLE_MAPS_KEY=your_maps_key
-
 # Backend (.env)
 MONGODB_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-SMTP_HOST=your_smtp_host
-SMTP_USER=your_smtp_user
-SMTP_PASS=your_smtp_password
-TWILIO_SID=your_twilio_sid
-TWILIO_AUTH_TOKEN=your_twilio_token
 ```
 
 4. Run the application:
@@ -149,24 +124,50 @@ npm run dev
 
 ## 📁 Project Structure
 ```
-lifeshare/
-├── client/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Home/
-│   │   │   ├── DonorRegistration/
-│   │   │   ├── BloodRequest/
-│   │   │   ├── Testimonials/
-│   │   │   └── Contact/
-│   │   ├── hooks/
-│   │   ├── services/
-│   │   └── utils/
-├── server/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   └── middleware/
-└── docs/
+lifeshare.health/
+├── public/                        # Public assets accessible in the browser
+│   ├── index.html                 # Main HTML file for React
+│   └── favicon.ico                 # Favicon for the website
+├── src/                           # React application source code
+│   ├── components/                # Reusable UI components
+│   │   ├── Registration.jsx       # User registration form
+│   │   ├── Contact.jsx            # Contact page component
+│   │   ├── FAQ.jsx                # Frequently Asked Questions
+│   │   ├── Home.jsx               # Home page
+│   │   ├── Home.css               # Home page styles
+│   │   ├── Navbar.jsx             # Navigation bar
+│   │   └── BloodRequest.jsx            # About us page
+│   ├── services/                  # API service functions
+│   │   └── api.js                 # Handles API calls
+│   ├── App.jsx                    # Main React component
+│   ├── index.js                   # React entry point
+│   └── index.css                  # Global CSS styles
+├── server/                        # Backend (Express.js & MongoDB)
+│   ├── config/                    # Configuration files
+│   │   └── db.js                  # MongoDB connection setup
+│   ├── controllers/               # Business logic
+│   │   ├── contactController.js   # Handles contact form logic
+│   │   ├── registrationController.js # Handles user registration logic
+│   │   └── bloodRequestController.js      # Handles authentication logic
+│   ├── models/                    # Mongoose schema definitions
+│   │   ├── Contact.js             # Contact form schema
+│   │   ├── User.js                # User schema
+│   │   └── BloodRequest.js        # Blood request schema
+│   ├── routes/                    # API routes
+│   │   ├── contactRoutes.js       # Contact-related routes
+│   │   ├── registrationRoutes.js  # Registration-related routes
+│   │   └── bloodRequestRoutes.js  # Blood request routes
+│   ├── middleware/                # Middleware functions
+│   │   └── update.js      # Authentication middleware
+│   ├── .env                       # Environment variables
+│   ├── package.json               # Backend dependencies
+│   ├── server.js                  # Express server entry point
+│   ├── README.md                   # Backend documentation
+└── .gitignore                      # Files to ignore in Git
+
+├── package.json                   # Frontend dependencies
+└── README.md                       # Project documentation
+
 ```
 
 ## 💡 Features in Development
