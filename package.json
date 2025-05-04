@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-   "build": "react-scripts build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "vite build",  
+  "lint": "eslint .",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@botpress/webchat": "^1.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
